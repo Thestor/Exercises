@@ -37,13 +37,13 @@ def determine_moves(board, position):
             pass
         else:
             board[number_position + y][indexed_position + x] = "+"
-        
+    
+    board.reverse()
     return board
         
 
 theboard1 = create_board(size_of_board)
 theboard2 = determine_moves(theboard1, position_of_knight)
-theboard2.reverse()
 
 for row in theboard2:
     print(" ".join(map(str, row)))
