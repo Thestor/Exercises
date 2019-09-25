@@ -33,7 +33,7 @@ def determine_moves(board, position):
     possible_moves = [[-2, 1], [-2, -1], [2, 1], [2, -1], [1, -2], [1, 2], [-1, -2], [-1, 2]]
     for x, y in possible_moves:
         
-        if indexed_position + x <= 0 or number_position + y <= 0 or indexed_position + x > len(board) - 1 or number_position + y > len(board) - 1:
+        if indexed_position + x < 0 or number_position + y < 0 or indexed_position + x > len(board) - 1 or number_position + y > len(board) - 1:
             pass
         else:
             board[number_position + y][indexed_position + x] = "+"
