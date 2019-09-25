@@ -52,14 +52,13 @@ def convert_to_arabic(roman):
     set_index = 0
     
     while (set_index <= (len(roman) - 1)):
-            
         
         if set_index <= len(roman) - 4:
             if roman[set_index + 3] == roman[set_index]:
-                if roman[set_index + 2] < roman[set_index + 3]:
+                if basis_to_arabic(roman[set_index + 2]) < basis_to_arabic(roman[set_index + 3]):
                     pass
                 
-                if roman[set_index + 1] < roman[set_index + 2]:
+                elif basis_to_arabic(roman[set_index + 1]) < basis_to_arabic(roman[set_index + 2]):
                     pass
                 
                 else:
@@ -72,7 +71,6 @@ def convert_to_arabic(roman):
             set_index += 1
             
         elif roman[set_index + 1] != roman[set_index]:
-            
             if set_index <= len(roman) - 2:
                 if basis_to_arabic(roman[set_index]) < basis_to_arabic(roman[set_index+1]):
                     if set_index <= len(roman) - 3:
@@ -93,7 +91,6 @@ def convert_to_arabic(roman):
                 
                 
         elif roman[set_index + 1] == roman[set_index]:
-            
             if set_index >= 2:
                 
                 if roman[set_index - 1] == roman[set_index - 2]:
