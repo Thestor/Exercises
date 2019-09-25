@@ -24,18 +24,19 @@ def determine_moves(board, position):
     for a in alphabet:
         if position[0] == a:
             indexed_position = alphabet.index(a)
-    if len(position) == 3:
+    if len(position) >= 3:
         number_position = eval(position[1] + position[2]) - 1
     else:
         number_position = eval(position[1]) - 1
-    board[indexed_position][number_position] = "O"
+    board[number_position][indexed_position] = "O"
     
     possible_moves = [[-2, 1], [-2, -1], [2, 1], [2, -1], [1, -2], [1, 2], [-1, -2], [-1, 2]]
     for x, y in possible_moves:
-        try:
-            board[indexed_position + x][number_position + y] = "+"
-        except IndexError:
+        
+        if indexed_position + x <= 0 or number_position + y <= 0 or indexed_position + x > len(board) - 1 or number_position + y > len(board) - 1:
             pass
+        else:
+            board[number_position + y][indexed_position + x] = "+"
         
     return board
         
@@ -44,6 +45,6 @@ theboard1 = create_board(size_of_board)
 theboard2 = determine_moves(theboard1, position_of_knight)
 theboard2.reverse()
 
-for row in theboard1:
+for row in theboard2:
     print(" ".join(map(str, row)))
     
