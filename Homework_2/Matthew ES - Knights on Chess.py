@@ -7,7 +7,7 @@ Created on Wed Sep 25 16:14:06 2019
 import string
 
 alphabet = list(string.ascii_uppercase)
-size_of_board = eval(input("Size of the board (a number): "))
+size_of_board = eval(input("Size of the board (a number, max 26): "))
 position_of_knight = input("The current position of the knight: ")
 
 def create_board(size):
@@ -24,7 +24,7 @@ def determine_moves(board, position):
     for a in alphabet:
         if position[0] == a:
             indexed_position = alphabet.index(a)
-    if len(position) >= 3:
+    if len(position) == 3:
         number_position = eval(position[1] + position[2]) - 1
     else:
         number_position = eval(position[1]) - 1
