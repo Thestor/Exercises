@@ -21,7 +21,7 @@ A. What is mean total number of steps taken per day?
 
 B. What is the average daily activity pattern?
 1. Make a time series plot of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
-2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
+2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps? (ANSWER: AT 835)
 
 C. Inputting missing values
 1. Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)
@@ -29,7 +29,7 @@ C. Inputting missing values
 3. Create a new dataset that is equal to the original dataset but with the missing data filled in.
 4. Make a histogram of the total number of steps taken each day, calculate, and report the mean and median total number of steps taken per day.
 
-D. Are there differences in activity patterns between weekdays and weekends?
+D. Are there differences in activity patterns between weekdays and weekends? (ANSWER: YES)
 1. Create a new factor variable in the dataset with two levels - "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.
 2. Make a plot containing a time series plot of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekdays or weekend days (y-axis).
 
