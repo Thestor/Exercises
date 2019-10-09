@@ -63,8 +63,9 @@ fig = plt.figure(dpi=80, figsize=(12, 7))
 plt.bar(intervaler, stepper, color='green')
 plt.title("Steps Taken in 2 Months (5-Minute Interval, Weekdays Only)")
 plt.xlabel("Time")
-plt.ylabel("Average of the eNumber of Steps Taken")
-fig.autofmt_xdate()
+plt.ylabel("Average of the Number of Steps Taken")
+
+plt.savefig(r"Figures\5-Minute Intervals (Weekdays).png")
 
 plt.show()
 plt.clf()
@@ -79,7 +80,8 @@ plt.bar(intervaler2, stepper2, color='green')
 plt.title("Steps Taken in 2 Months (5-Minute Interval, Weekends Only)")
 plt.xlabel("Time")
 plt.ylabel("Average of the Number of Steps Taken")
-fig.autofmt_xdate()
+
+plt.savefig(r"Figures\5-Minute Intervals (Weekends).png")
 
 plt.show()
 plt.clf()

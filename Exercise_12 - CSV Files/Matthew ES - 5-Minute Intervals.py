@@ -51,7 +51,8 @@ plt.bar(intervaler, stepper, color='green')
 plt.title("Steps Taken in 2 Months (5-Minute Interval)")
 plt.xlabel("Time")
 plt.ylabel("Average of the Number of Steps Taken")
-fig.autofmt_xdate()
+
+plt.savefig(r"Figures\5-Minute Intervals.png")
 
 plt.show()
 

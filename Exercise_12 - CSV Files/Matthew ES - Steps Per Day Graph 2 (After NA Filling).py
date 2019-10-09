@@ -49,6 +49,9 @@ plt.xlabel("Dates")
 plt.ylabel("Number of Steps Taken")
 fig.autofmt_xdate()
 
+
+plt.savefig(r"Figures\Steps Per Day Graph 2 (After NA Filling).png")
+
 plt.show()
 
 print("The number of missing data:", missing_data_count)

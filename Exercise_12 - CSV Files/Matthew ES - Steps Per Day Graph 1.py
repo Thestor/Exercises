@@ -64,6 +64,8 @@ plt.xlabel("Dates")
 plt.ylabel("Number of Steps Taken")
 fig.autofmt_xdate()
 
+plt.savefig(r"Figures\Steps Per Day Graph 1.png")
+
 #ax.xaxis.set_major_locator(mdates.YearLocator())
 #ax.xaxis.set_major_formatter(mdates.DateFormatter('%d.%m.%y'))
 
@@ -75,7 +77,6 @@ plt.show()
 
 print("The number of missing data:", missing_data_count)
 
-print(len(steps_data))
 for i in range(len(steps_data)-1):
     print("The total number of steps taken (Day %i):" %(i+1), steps_data[i+1])
     
