@@ -1,4 +1,4 @@
-The respective folder contains 6 Python (.py) files and 3 Comma-Separated Values (.csv) files in a CSV Files receptacle.
+The respective folder contains 6 Python (.py) files, 3 Comma-Separated Values (.csv) files in the CSV Files receptacle, and 3 PNG (.png) files in the Figures receptacle.
 
 **INSTRUCTIONS:**
 
