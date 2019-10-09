@@ -1,6 +1,6 @@
 The respective folder contains 6 Python (.py) files and 3 Comma-Separated Values (.csv) files in a CSV Files receptacle.
 
-INSTRUCTIONS:
+**INSTRUCTIONS:**
 
 For this exercise, you will be using activity.csv to generate and display the needed information.
 It is suggested that you look into the following modules.
@@ -35,10 +35,10 @@ D. Are there differences in activity patterns between weekdays and weekends?
 
 All the files (.py, .csv, and figures must be saved in your github repository), make sure to include a readme.md file which contains the description of this exercise (you could copy paste whatever is written here actually)Good luck!Note: I could help you get started tomorrow, please do read in advance about the modules listed in this document.
 
-DESCRIPTIONS:
+**DESCRIPTIONS:**
 
 1. Steps Per Day Graph 1 contains answers to the A section.
-2. Steps Per Day Graph 2 contains answers to the C.4 subsection.
+2. Steps Per Day Graph 2 (After NA Filling) contains answers to the C.4 subsection.
 3. NA Filling contains answers to the C.1,2,3 subsections.
 4. Adding Weekdays Weekends contains answers to the D.1 subsection.
 5. 5-Minute Intervals contains answers to the B section.
