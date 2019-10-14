@@ -37,13 +37,14 @@ All the files (.py, .csv, and figures must be saved in your github repository), 
 
 **DESCRIPTIONS:**
 
-1. Steps Per Day Graph 1 contains answers to the A section.
-2. Steps Per Day Graph 2 (After NA Filling) contains answers to the C.4 subsection.
-3. NA Filling contains answers to the C.1,2,3 subsections.
-4. Adding Weekdays Weekends contains answers to the D.1 subsection.
-5. 5-Minute Intervals contains answers to the B section.
-6. 5-Minute Intervals (Weekdays vs Weekends) contains answers to the D.2 subsection.
+1. Steps Per Day Graph 1 contains answers to the section A.
+2. Steps Per Day Graph 2 (After NA Filling) contains answers to the subsection C.4.
+3. NA Filling contains answers to the subsections C.1,2,3.
+4. Adding Weekdays Weekends contains answers to the subsection D.1.
+5. 5-Minute Intervals contains answers to the section B.
+6. 5-Minute Intervals (Weekdays vs Weekends) contains answers to the subsection D.2.
+7. Steps Each Day (HISTOGRAM) contains additional answers to the subsection A.2.
 
-7. activity.csv is the main CSV file holding unedited information for FILE 1, FILE 3, and FILE 5.
-8. activity2.csv is a supplementary CSV file holding edited information resulted from FILE 3 and for FILE 2 and FILE 4.
-9. activity3.csv is a supplementay CSV file holding edited information resulted from FILE 4 and for FILE 6.
+8. activity.csv is the main CSV file holding unedited information for FILE 1, FILE 3, FILE 5, and FILE 7.
+9. activity2.csv is a supplementary CSV file holding edited information resulted from FILE 3 and for FILE 2 and FILE 4.
+10. activity3.csv is a supplementay CSV file holding edited information resulted from FILE 4 and for FILE 6.
