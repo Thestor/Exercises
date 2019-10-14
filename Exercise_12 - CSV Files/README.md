@@ -44,7 +44,8 @@ All the files (.py, .csv, and figures must be saved in your github repository), 
 5. 5-Minute Intervals contains answers to the section B.
 6. 5-Minute Intervals (Weekdays vs Weekends) contains answers to the subsection D.2.
 7. Steps Each Day (HISTOGRAM) contains additional answers to the subsection A.2.
+8. Steps Each Day 2 (HISTOGRAM) contains additional answers to the subsection C.4.
 
-8. activity.csv is the main CSV file holding unedited information for FILE 1, FILE 3, FILE 5, and FILE 7.
-9. activity2.csv is a supplementary CSV file holding edited information resulted from FILE 3 and for FILE 2 and FILE 4.
-10. activity3.csv is a supplementay CSV file holding edited information resulted from FILE 4 and for FILE 6.
+9. activity.csv is the main CSV file holding unedited information for FILE 1, FILE 3, FILE 5, and FILE 7.
+10. activity2.csv is a supplementary CSV file holding edited information resulted from FILE 3 and for FILE 2, FILE 4, and FILE 8.
+11. activity3.csv is a supplementay CSV file holding edited information resulted from FILE 4 and for FILE 6.
