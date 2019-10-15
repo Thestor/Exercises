@@ -16,7 +16,7 @@ def draw_hbar(word_data):
 
     fig, ax = plt.subplots(dpi=80, figsize=(10, 8))
 
-    ax.barh(y_pos, freq, align='center')
+    ax.barh(y_pos, freq, align='center', color = 'green')
     ax.set_yticks(y_pos)
     ax.set_yticklabels(word_data.keys())
     ax.set_xlabel("Frequency")
