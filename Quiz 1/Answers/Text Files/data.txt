@@ -1,0 +1,7 @@
+ID#Name#Position#Salary
+S0001#Gary#Staff#4500000
+S0002#James#Staff#5000000
+S0003#Judith#Manager#10700000
+S0005#Joy#Officer#7800000
+S0004#Mama#Manager#90000000000
+S0006#Aman#Manager#10000000000

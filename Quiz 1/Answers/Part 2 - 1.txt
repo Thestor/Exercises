@@ -1,0 +1,13 @@
+(a) The parent class is Spell, whereas the children classes include Accio(Spell) and
+Confundo(Spell).
+
+(b)
+Accio
+Summoning Charm Accio
+No description
+Confundus Charm Confundo
+Causes the victim to become confused and befuddled.
+
+(c) It executes the get_description function in the class Confundo(Spell) because it overrides
+the get_description in the superclass Spell. Functions in a subclass always override
+functions with identical names in a superclass.
