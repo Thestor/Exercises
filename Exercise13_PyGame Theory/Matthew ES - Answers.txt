@@ -1,0 +1,215 @@
+1. Pygame is a cross-platform set of Python modules designed for writing video 
+games. It includes computer graphics and sound libraries designed to be used 
+with the Python programming language. Since Pygame is an open source library and
+can be accessed through Github, it is possible to modify its source code locally.
+
+
+
+2. > Referring to the class Button in the file Exercise12_PyGame Horizontal Board / button.py.
+
+First thing first, we create the image and determine its coordinate position on the screen.
+After that, to draw the button on the screen, the function draw_button() can be called. The function
+draw() fills the screen with a solid color.
+
+
+
+3. These are the basics of augmenting a Pygame code with a sound.
+
+# To add sounds, get and input the file using .Sound().
+> crash_sound = pygame.mixer.Sound("joy.wav")
+
+# Play the sound.
+pygame.mixer.Sound.play(crash_sound)
+
+# To add music, load the file directly.
+> pygame.mixer.music.load(crash_sound)
+
+# Play the music. (-1) for forever, else for the specified number of minutes.
+> pygame.mixer.music.play(-1)
+
+# Stop the music.
+> pygame.mixer.music.stop()
+
+# Pause and unpause the music.
+> pygame.mixer.music.pause()
+> pygame.mixer.music.unpause()
+
+
+
+4. A timer is a countdown entity, while a stopwatch is a counter entity (incremental).
+
+To use a timer, we can use the library threading.
+
+# This will start a new thread that, after 30 seconds, calls my_function.
+> t = threading.Timer(30.0, my_function)
+
+# Manual implementation.
+import time
+import math
+
+class Timer:
+    
+    def __init__(self, limit):
+        self.timeLimit = limit
+        
+    def startTimer(self):
+        start = math.floor(time.time())
+	future = start + self.timeLimit
+	now = future
+	while True:
+		time.sleep(1)
+		now -= 1
+    		if math.floor(time.time()) > future:
+        		break
+
+
+
+5. In Pygame, sprites are objects. The sprite classes are very optimized, so
+it's likely the game will run faster with the sprite module than without. As mentioned before,
+the Sprite class is designed to be a base class for all your game objects. The Group class is
+a container for different Sprite objects. There are actually several different types of group
+classes. Some of the Groups can draw all the elements they contain, for example.
+
+import pygame
+from pygame.sprite import Sprite
+
+# Initialize sprite.
+class gem(Sprite):
+
+    def __init__(self, color, width, height):
+       super().__init__(self)
+
+       self.image = pygame.Surface([width, height])
+       self.image.fill(color)
+       self.rect = self.image.get_rect()
+
+gem1 = gem(color, width, height)
+
+# Inilialize group.
+gems = pygame.sprite.Group()
+gems.add(gem1)
+
+
+
+6. Collision detection is a tool that detects a collision of sprite with another sprite.
+
+collisions = pygame.sprite.groupcollide(
+                self.bullets, self.aliens, True, True)
+
+    if collisions:
+        for aliens in collisions.values():
+            self.stats.score += self.settings.alien_points * len(aliens)
+        self.sb.prep_score()
+        self.sb.check_high_score()
+
+
+
+7. > Referring to the class Ship in the file Exercise12_PyGame Horizontal Board / ship.py.
+
+To draw the image on the screen, the function blitme() can be called. Note that, to draw
+a complicated image that has numerous colors, we must use blit() instead of draw().
+
+
+
+8. Assuming stuff_to_draw is a group of sprites.
+ 
+stuff_to_draw.draw(screen)
+
+
+
+9. No Question
+
+10. Computer animation physics or game physics involves the introduction of the laws of
+physics into a simulation or game engine, particularly in 3D computer graphics, for the
+purpose of making the effects appear more realistic to the observer. Typically, simulation
+physics is only a close approximation to actual physics, and computation is performed using
+discrete values. Additionally, games may intentionally deviate from actual physics for
+gameplay purposes; a common example is allowing the player to double jump when there is
+nothing to jump off of, or changing the values of certain physical parameters, such as the
+amount of gravity present.
+
+There are several elements that form components of simulation physics including the physics
+engine, program code that is used to simulate Newtonian physics within the environment, and
+collision detection, used to solve the problem of determining when any two or more physical
+objects in the environment cross each other's path.
+
+Game physics allow broad enchanting special effects to be implemented in the game.
+
+
+
+11. > Snippet from Exercise12_PyGame Horizontal Board / button.py
+
+self.text_color = (255, 255, 255)
+self.font = pygame.font.SysFont(None, 48)
+self.msg_image = self.font.render(msg, True, self.text_color,
+self.button_color)
+self.msg_image_rect = self.msg_image.get_rect()
+self.msg_image_rect.center = self.rect.center
+
+
+
+12. > Snippet from Exercise12_PyGame Horizontal Board / ship.py  and alien_invasion.py
+
+self.moving_down = False
+self.moving_up = False
+
+def update(self):
+    """Update the ship's position based on movement flags."""
+    # Update the ship's y value, not the rect.
+    if self.moving_down and self.rect.bottom < self.screen_rect.bottom:
+        self.y += self.settings.ship_speed
+    if self.moving_up and self.rect.top > 0:
+        self.y -= self.settings.ship_speed
+
+    # Update rect object from self.y.
+    self.rect.y = self.y
+
+for event in pygame.event.get():
+    if event.type == pygame.KEYDOWN:
+        self._check_keydown_events(event)
+    elif event.type == pygame.KEYUP:
+        self._check_keyup_events(event)
+
+def _check_keydown_events(self, event):
+    """Respond to keypresses."""
+    if event.key == pygame.K_UP:
+        self.ship.moving_up = True
+    elif event.key == pygame.K_DOWN:
+        self.ship.moving_down = True
+
+def _check_keyup_events(self, event):
+    """Respond to key releases."""
+    if event.key == pygame.K_DOWN:
+        self.ship.moving_down = False
+    elif event.key == pygame.K_UP:
+        self.ship.moving_up = False
+
+
+
+13. > Referring to number (5).
+
+# Initialize sprite.
+class gem(Sprite):
+
+    def __init__(self, color, width, height):
+       super().__init__(self)
+
+       self.image = pygame.Surface([width, height])
+       self.image.fill(color) # FILLS COLOR
+       self.rect = self.image.get_rect()
+
+gem1 = gem(color, width, height)
+
+
+
+14. > For example, we know the width and height of the screen.
+
+import random
+
+x = random.randint(0, width)
+y = random.randint(0, height)
+
+self.rect = pygame.Rect(x, y, self.width, self.height)
+self.screen.blit(self.player_image, self.rect)
+
+15. Y
