@@ -57,10 +57,10 @@ class Timer:
 	future = start + self.timeLimit
 	self.now = future
 	while True:
-		time.sleep(1)
-		self.now -= 1
-    		if math.floor(time.time()) > future:
-        		break
+	    time.sleep(1)
+	    self.now -= 1
+    	    if math.floor(time.time()) > future:
+            	break
 
     def getCurrentSecond(self):
         return self.now
