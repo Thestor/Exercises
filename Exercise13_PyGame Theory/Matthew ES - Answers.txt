@@ -55,14 +55,15 @@ class Timer:
     def startTimer(self):
         start = math.floor(time.time())
 	future = start + self.timeLimit
-	now = future
+	self.now = future
 	while True:
 		time.sleep(1)
-		now -= 1
+		self.now -= 1
     		if math.floor(time.time()) > future:
         		break
 
-
+    def getCurrentSecond(self):
+        return self.now
 
 5. In Pygame, sprites are objects. The sprite classes are very optimized, so
 it's likely the game will run faster with the sprite module than without. As mentioned before,
