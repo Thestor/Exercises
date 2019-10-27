@@ -19,7 +19,7 @@ draw() fills the screen with a solid color.
 > crash_sound = pygame.mixer.Sound("joy.wav")
 
 # Play the sound.
-pygame.mixer.Sound.play(crash_sound)
+> pygame.mixer.Sound.play(crash_sound)
 
 # To add music, load the file directly.
 > pygame.mixer.music.load(crash_sound)
