@@ -61,7 +61,7 @@ public class Driver {
         
         int squareSize = scan.nextInt();
         
-        MagicSquare x = Utility.createNewMagicSquare(squareSize);
+        MagicSquareFinal x = Utility.createNewMagicSquare(squareSize);
         x.printMagicSquare();
         
     }

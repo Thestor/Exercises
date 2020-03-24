@@ -70,8 +70,8 @@ public class Utility {
         return true; 
     }  
     
-    public static MagicSquare createNewMagicSquare(int size){
-        MagicSquare x = new MagicSquare(size);
+    public static MagicSquareFinal createNewMagicSquare(int size){
+        MagicSquareFinal x = new MagicSquareFinal(size);
         return x;
     }
 }
